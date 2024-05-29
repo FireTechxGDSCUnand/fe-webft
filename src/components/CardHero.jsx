@@ -1,6 +1,4 @@
-import { Calendar } from "lucide-react";
-import { MonitorPause } from "lucide-react";
-import { CodeSquare } from "lucide-react";
+import { Calendar, CodeSquare, MonitorDot } from "lucide-react";
 
 export default function CardHero({ title, tanggal, custom = "" }) {
   return (
@@ -9,7 +7,7 @@ export default function CardHero({ title, tanggal, custom = "" }) {
         {title === "Hackton" ? (
           <CodeSquare size={40} />
         ) : (
-          <MonitorPause size={40} />
+          <MonitorDot size={40} />
         )}
         <div>
           <h1 className="text-xl font-bold "> {title}</h1>

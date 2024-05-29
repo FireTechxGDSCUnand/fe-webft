@@ -1,15 +1,22 @@
 import {
   BrowserRouter as Router,
-  Routes,
   Route,
-} from "react-router-dom";
-import LandingPage from "./LandingPage";
+  Routes,
+} from 'react-router-dom';
 
- const App = ()=>{
+import Hackathon from './components/section/Hackathon';
+import SeminatIT from './components/section/SeminatIT';
+import LandingPage from './LandingPage';
+
+const App = ()=>{
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/event/hackathon" element={<Hackathon />} />
+        <Route path="/event/seminarIT" element={<SeminatIT />} />
+
+        
       </Routes>
     </Router>
   );

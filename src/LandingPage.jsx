@@ -1,8 +1,9 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/section/Hero"
-import Count from "./components/section/Count"
-import Event from "./components/section/Event"
-import Footer from "./components/Footer"
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Count from './components/section/Count';
+import Event from './components/section/Event';
+import Hero from './components/section/Hero';
+
 export default function LandingPage() {
   return (
     <div>

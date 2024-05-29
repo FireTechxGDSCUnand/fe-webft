@@ -1,14 +1,16 @@
-import logo from "/public/ft.svg";
-import { Instagram } from "lucide-react";
-import { Twitter } from "lucide-react";
-import { Linkedin } from "lucide-react";
-import { Youtube } from "lucide-react";
+import logo from '/public/ft.svg';
+import {
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from 'lucide-react';
 
 export default function Footer() {
   return (
     <div
       id="tentangkami"
-      className="px-20 py-10 bg-neutral-800  grid grid-cols-2"
+      className="lg:px-20 px-4 py-10 bg-neutral-800  lg:grid lg:grid-cols-2"
     >
       <section className="flex items-center">
         <img src={logo} alt="logi" className="w-64" />
@@ -17,7 +19,7 @@ export default function Footer() {
           <p className="font-semibold text-red ">LIFE GETS EASIER WITH IT</p>
         </figcaption>
       </section>
-      <section className="flex items-start pt-20 justify-between">
+      <section className="lg:flex max-md:space-y-4 items-start pt-20 justify-between">
         <div>
           <h1 className="font-bold text-white text-3xl ">About Us</h1>
           <p className="font-semibold text-neutral-500 leading-tight">
