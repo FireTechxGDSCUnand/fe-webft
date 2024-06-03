@@ -1,7 +1,6 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 import ft from '/public/ft.svg';
 import ua from '/public/ua.svg';
@@ -17,7 +16,7 @@ export default function Navbar() {
   const [isLoginInitial, setIsLoginInitial] = useState(true);
   const menuItems = [
     { name: 'Beranda', link: 'beranda' },
-    { name: 'Event', link: 'event' },
+    { name: 'Event', link: '/event' },
     { name: 'Tentang Kami', link: 'tentangkami' },
   ];
 
@@ -32,10 +31,6 @@ export default function Navbar() {
       document.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  };
 
   const openAuthModal = (isLogin) => {
     setIsLoginInitial(isLogin);
@@ -56,22 +51,24 @@ export default function Navbar() {
         }`}
       >
         <nav className="hidden md:flex my-3 relative mx-20 items-center justify-between">
-          <section className="flex">
+          <Link to='/' className="flex">
             <img src={ft} alt="ft" className="w-14" />
             <img src={ua} alt="ua" className="w-14" />
-          </section>
+          </Link>
           <section className="flex gap-4 items-center">
             {menuItems.map((item, i) =>
               item.name.toLowerCase() === 'event' ? (
                 <Dropdown title="Event" key={i} />
               ) : (
-                <button
-                  onClick={() => scrollTo(item.link)}
+                <ScrollLink
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
                   className="font-medium text-md cursor-pointer mr-4"
                   key={i}
                 >
                   {item.name}
-                </button>
+                </ScrollLink>
               )
             )}
             <Button onClick={() => openAuthModal(false)} variant="primary">

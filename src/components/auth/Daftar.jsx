@@ -3,14 +3,14 @@ import { useState } from 'react';
 import {
   Eye,
   EyeOff,
-} from 'lucide-react'; // Import icons
+} from 'lucide-react'; 
 
 import daftar from '@/apis/auth/daftar';
 
 import Button from '../Button';
 import Input from '../Input';
 
-export default function Daftar() {
+export default function Daftar({ onSuccess }) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -41,21 +41,32 @@ export default function Daftar() {
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const submit = await daftar(email, username, password, confirmPassword);
-    console.log(submit); 
+    try {
+      const response = await daftar(username, email, password, confirmPassword);
+      if (response.success) {
+        console.log(response.message);
+        onSuccess(); // Switch to login form
+      } else {
+        console.error(response.message);
+      }
+    } catch (error) {
+      console.error('Registration failed', error);
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <h1 className="text-center font-bold text-3xl">Daftar Akun</h1>
-      <Input value={email} onChange={handleEmailChange} placeholder="Email" />
       <Input
+        type="text"
         value={username}
         onChange={handleUsernameChange}
         placeholder="Username"
       />
+      <Input type="email" value={email} onChange={handleEmailChange} placeholder="Email" />
       <div className="relative">
         <Input
           value={password}

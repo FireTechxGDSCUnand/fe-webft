@@ -41,9 +41,7 @@ export default function Hero() {
               </p>
             </div>
             <h3 className="text-lg leading-normali text-neutral-800 my-4">
-              Merupakan Acara IT Terbesar Tahunan yang <br /> diselenggarakan
-              oleh Unit Kegiatan Mahasiswa <br /> (UKM) Neo Telemetri,
-              Universitas Andalas.
+            Merupakan Acara IT Terbesar Tahunan yang diselenggarakan  oleh Unit Kegiatan Mahasiswa (UKM) Neo Telemetri, Universitas Andalas.
             </h3>
             <div className="space-x-3 mt-8">
               <Button onClick={() => handleRedirect("event")} variant="primary">

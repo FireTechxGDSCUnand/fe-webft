@@ -1,16 +1,9 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
 import ft from '/public/ft.svg';
 import ua from '/public/ua.svg';
-import {
-  ChevronDown,
-  ChevronUp,
-  Menu,
-} from 'lucide-react';
+import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 
 import Auth from './auth';
 import Button from './Button';
@@ -56,12 +49,6 @@ export default function NavbarMobile() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-    setIsEventDropdownOpen(false);
-  };
 
   const openAuthModal = (isLogin) => {
     setIsLoginInitial(isLogin);
@@ -127,13 +114,15 @@ export default function NavbarMobile() {
                     )}
                   </>
                 ) : (
-                  <a
-                    className='flex hover:bg-neutral-200 py-2 ts rounded-md flex-col'
-                    href={`#${item.link}`}
-                    onClick={() => scrollTo(item.link)}
+                  <ScrollLink
+                    to={item.link}
+                    smooth={true}
+                    duration={500}
+                    className='flex hover:bg-neutral-200 py-2 ts rounded-md flex-col cursor-pointer'
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </ScrollLink>
                 )}
               </div>
             ))}

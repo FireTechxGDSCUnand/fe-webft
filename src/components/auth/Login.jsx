@@ -27,9 +27,19 @@ export default function Login() {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = async ()=>{
-    const data =  await login(username, password)
-    console.log(data)
+  const handleSubmit = async (event) => {
+    event.preventDefault(); 
+    try {
+      const response = await login(username, password);
+      if (response.success) {
+        console.log(response.message);
+        window.location.href = `${import.meta.env.VITE_FRONTEND_BASE_URL}/user/beranda`; 
+      } else {
+        console.error(response.message);
+      }
+    } catch (error) {
+      console.error('Login failed', error);
+    }
   }
 
   return (

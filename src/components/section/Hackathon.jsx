@@ -17,7 +17,7 @@ export default function SeminatIT() {
       <section className="lg:mx-20 max-md:mx-4 lg:grid lg:grid-cols-2 min-h-screen max-md:py-24 lg:pt-32">
       <Desc
       title="Hackathon"
-      description="Lorem ipsum dolor sit amet consectetur. Sed malesuada adipiscing nec sed velit quam in id cras. Fames orci nullam platea venenatis tincidunt. Ut risus orci turpis aenean. Fringilla tellus ultrices lorem eleifend nulla eu elit. Tortor tincidunt mauris amet massa vel pellentesque cras."
+      description="Hackathon adalah kompetisi tim untuk menciptakan solusi inovatif dalam waktu terbatas. Acara ini memberikan kesempatan bagi peserta untuk belajar hal baru dan memperluas jaringan profesional, dengan hadiah menarik bagi tim terbaik. Ayo bergabung dan tunjukkan kreativitas serta keahlianmu!"
       countdownText="3 HARI LAGI!!"
       buttonText="DAFTAR SEKARANG!!"
       buttonVariant="second"  

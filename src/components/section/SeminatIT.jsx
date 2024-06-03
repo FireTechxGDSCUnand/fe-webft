@@ -16,8 +16,8 @@ export default function SeminatIT() {
     <Navbar />
     <section className="lg:mx-20 max-md:mx-4 lg:grid lg:grid-cols-2 min-h-screen max-md:py-24 lg:pt-32">
     <Desc
-    title="Hackathon"
-    description="Lorem ipsum dolor sit amet consectetur. Sed malesuada adipiscing nec sed velit quam in id cras. Fames orci nullam platea venenatis tincidunt. Ut risus orci turpis aenean. Fringilla tellus ultrices lorem eleifend nulla eu elit. Tortor tincidunt mauris amet massa vel pellentesque cras."
+    title="Seminat IT"
+    description='Seminar IT bertema "Becoming IT Freelancer in 2024" adalah acara inspiratif yang dirancang untuk membantu Anda memulai karier di bidang teknologi. Pelajari langkah praktis, strategi mendapatkan klien, dan tips sukses dari para ahli, serta berjejaring dengan profesional lain. Daftar sekarang dan mulailah karier Anda sebagai freelancer di 2024!'
     countdownText="3 HARI LAGI!!"
     buttonText="DAFTAR SEKARANG!!"
     buttonVariant="second"  

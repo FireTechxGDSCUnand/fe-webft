@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import o1 from '/public/o1.svg';
-import v from '/public/Vector.svg';
+import o1 from "/public/o1.svg";
+import v from "/public/Vector.svg";
 
-import Auth from '../auth';
-import CardEvent from '../CardEvent';
+import Auth from "../auth";
+import CardEvent from "../CardEvent";
 
 export default function Event() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,31 +29,32 @@ export default function Event() {
           alt="o"
           className="absolute max-md:hidden -left-20 rotate-180 -top-32"
         />
-        <img src={o1} alt="o" className="max-md:hidden absolute -right-20 top-[550px]" />
+        <img
+          src={o1}
+          alt="o"
+          className="max-md:hidden absolute -right-20 top-[550px]"
+        />
       </div>
       <section className="mt-12 flex flex-col items-center relative text-center">
         <h1 className="text-5xl font-bold text-red">Event</h1>
         <img src={v} className="lg:w-1/12  mb-2" />
-        <p className="font-normal text-neutral-600 leading-tight text-lg">
-          Firetech tahun ini memiliki 2 acara utama 
-          yang berbeda dari Firetech sebelumnya,
-          yaitu Hacktahon dan Seminar IT
+        <p className="font-normal text-neutral-600 leading-tight md:w-1/3 text-lg">
+          <span className="text-red font-semibold">Firetech</span> tahun ini
+          memiliki 2 acara utama yang berbeda dari Firetech sebelumnya, yaitu
+          Hackathon dan Seminar IT
         </p>
       </section>
-      <section className="flex lg:my-12 flex max-md:flex-col max-md:mt-12 gap-4">
+      <section className="grid md:grid-cols-2  grid-cols-1 my-12 gap-4">
         <CardEvent
           title="Hackton"
-          desc="Lorem ipsum dolor sit amet consectetur. Fermentum quam fringilla augue
-         amet ut. Tortor aliquet tristique integer quisque consectetur. Eu arcu
-         ultrices eget justo et molestie. Quam libero."
+          desc="Hackathon adalah kompetisi tim untuk menciptakan solusi inovatif dalam waktu terbatas. Acara ini memberikan kesempatan bagi peserta untuk belajar hal baru dan memperluas jaringan profesional, dengan hadiah menarik bagi tim terbaik. Ayo bergabung dan tunjukkan kreativitas serta keahlianmu!
+          "
           href="/event/hackathon"
           onDaftarClick={() => openAuthModal(false)}
         />
         <CardEvent
           title="Seminar IT"
-          desc="Lorem ipsum dolor sit amet consectetur. Fermentum quam fringilla augue
-         amet ut. Tortor aliquet tristique integer quisque consectetur. Eu arcu
-         ultrices eget justo et molestie. Quam libero."
+          desc='Seminar IT bertema "Becoming IT Freelancer in 2024" adalah acara inspiratif yang dirancang untuk membantu Anda memulai karier di bidang teknologi. Pelajari langkah praktis, strategi mendapatkan klien, dan tips sukses dari para ahli, serta berjejaring dengan profesional lain. Daftar sekarang dan mulailah karier Anda sebagai freelancer di 2024!'
           href="/event/seminarIT"
           onDaftarClick={() => openAuthModal(false)}
         />
