@@ -63,7 +63,7 @@ export default function Hero() {
           <CardHero
             title="Seminar IT"
             tanggal="11 - 16 Mei 2024"
-            custom="lg:bottom-48 max-md:-bottom-36 max-md:left-2 shadow lg:right-96"
+            custom="lg:bottom-48 max-md:-bottom-2 max-md:left-2 shadow lg:right-96"
           />
         </section>
       </section>

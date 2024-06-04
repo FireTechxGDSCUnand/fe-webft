@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 import ft from '/public/ft.svg';
 import ua from '/public/ua.svg';
+import gd from '/public/gdsc.png';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 
 import Auth from './auth';
@@ -74,10 +76,11 @@ export default function NavbarMobile() {
             : "bg-white bg-opacity-0"
         }`}
       >
-        <section className="flex">
-          <img src={ft} alt="ft" className="w-10" />
-          <img src={ua} alt="ua" className="w-10" />
-        </section>
+       <Link to='/' className="flex items-center">
+            <img src={ft} alt="ft" className="w-14" />
+            <img src={ua} alt="ua" className="w-14" />
+            <img src={gd} alt="ua" className="h-8 ml-4 " />
+          </Link>
         <section className='mr-8'>
           <Menu onClick={() => setIsMenuOpen(!isMenuOpen)} />
         </section>

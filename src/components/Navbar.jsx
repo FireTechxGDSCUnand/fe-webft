@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import ft from '/public/ft.svg';
 import ua from '/public/ua.svg';
+import gd from '/public/gdsc.png';
+
 
 import Auth from './auth';
 import Button from './Button';
@@ -51,9 +53,10 @@ export default function Navbar() {
         }`}
       >
         <nav className="hidden md:flex my-3 relative mx-20 items-center justify-between">
-          <Link to='/' className="flex">
+          <Link to='/' className="flex items-center">
             <img src={ft} alt="ft" className="w-14" />
             <img src={ua} alt="ua" className="w-14" />
+            <img src={gd} alt="ua" className="h-8 ml-4" />
           </Link>
           <section className="flex gap-4 items-center">
             {menuItems.map((item, i) =>

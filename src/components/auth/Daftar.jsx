@@ -1,16 +1,10 @@
 import { useState } from 'react';
-
-import {
-  Eye,
-  EyeOff,
-} from 'lucide-react'; 
-
+import { Eye, EyeOff } from 'lucide-react'; 
 import daftar from '@/apis/auth/daftar';
-
 import Button from '../Button';
 import Input from '../Input';
 
-export default function Daftar({ onSuccess }) {
+export default function Daftar({ onMessage, onSuccess }) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -44,15 +38,21 @@ export default function Daftar({ onSuccess }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (password !== confirmPassword) {
+      onMessage("Passwords do not match");
+      return;
+    }
     try {
       const response = await daftar(username, email, password, confirmPassword);
       if (response.success) {
-        console.log(response.message);
+        onMessage(response.message);
         onSuccess(); // Switch to login form
       } else {
+        onMessage(response.message);
         console.error(response.message);
       }
     } catch (error) {
+      onMessage('Registration failed');
       console.error('Registration failed', error);
     }
   }

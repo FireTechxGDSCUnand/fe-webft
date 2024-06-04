@@ -24,6 +24,7 @@ const login = async (username, password) => {
 
     if (token) {
       localStorage.setItem("token", token);
+      localStorage.setItem("username", username);
     }
     return result;
   } catch (error) {

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Count from './components/section/Count';
 import Event from './components/section/Event';
 import Hero from './components/section/Hero';
+import Sponsor from './components/section/Sponsor';
 
 export default function LandingPage() {
   return (
@@ -18,6 +19,9 @@ export default function LandingPage() {
       <Element name="count">
         <Count />
       </Element>
+      {/* <Element name="sponsor">
+        <Sponsor />
+      </Element> */}
       <Element name="footer">
         <Footer />
       </Element>

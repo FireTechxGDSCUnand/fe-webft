@@ -6,7 +6,7 @@ import Button from './Button';
 
 export default function CardEvent({ title, desc, href, onDaftarClick }) {
   return (
-    <div className="bg-white border-2 ts hover:shadow-2xl border-white rounded-xl backdrop-blur-sm bg-opacity-30">
+    <div className="bg-white border-2 ts hover:shadow-2xl border-white max-md:shadow rounded-xl backdrop-blur-sm bg-opacity-30">
       <section>
         {title === 'Hackton' ? (
           <img src={gb1} alt="Hackton" />

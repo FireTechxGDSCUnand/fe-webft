@@ -1,16 +1,10 @@
 import { useState } from 'react';
-
-import {
-  Eye,
-  EyeOff,
-} from 'lucide-react';
-
+import { Eye, EyeOff } from 'lucide-react';
 import login from '@/apis/auth/login';
-
 import Button from '../Button';
 import Input from '../Input';
 
-export default function Login() {
+export default function Login({ onMessage }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -28,19 +22,23 @@ export default function Login() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     try {
       const response = await login(username, password);
       if (response.success) {
-        console.log(response.message);
-        window.location.href = `${import.meta.env.VITE_FRONTEND_BASE_URL}/user/beranda`; 
+        onMessage(response.message);
+        window.location.href = `${
+          import.meta.env.VITE_FRONTEND_BASE_URL
+        }/user/beranda`;
       } else {
+        onMessage(response.message);
         console.error(response.message);
       }
     } catch (error) {
-      console.error('Login failed', error);
+      onMessage("Login failed");
+      console.error("Login failed", error);
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
