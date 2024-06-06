@@ -20,7 +20,9 @@ const login = async (username, password) => {
     const response = await fetch(url, requestOptions);
 
     const result = await response.json();
-    const token = result.token;
+    console.log(result.data.token)
+    const token = result.data.token;
+
 
     if (token) {
       localStorage.setItem("token", token);

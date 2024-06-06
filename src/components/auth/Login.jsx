@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react';
-import login from '@/apis/auth/login';
-import Button from '../Button';
-import Input from '../Input';
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
+import login from "@/apis/auth/login";
+import Button from "../Button";
+import Input from "../Input";
 
 export default function Login({ onMessage }) {
   const [username, setUsername] = useState("");
