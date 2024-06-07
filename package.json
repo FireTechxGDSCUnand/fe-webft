@@ -2,6 +2,7 @@
   "name": "fe-firetech",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://firetech.neotelemetri.com",
   "type": "module",
   "scripts": {
     "dev": "vite",

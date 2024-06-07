@@ -23,10 +23,10 @@ export default function SeminatIT() {
     buttonVariant="second"  
     iconColor="red"         
   />        <CardCostum
-    dateText="11 Mei - 11 Mei 2024"
+  dateText="5 Juni - 19 Juni 2024"
     categoryText="Kategori Mahasiswa"
-    teamText="Bertim"
-    feeText="Insert 100k"
+    teamText="Pribadi"
+    feeText="Free"
     detailText="Detail acara dapat diunduh pada link disamping ini"
     downloadText="Unduh"
     bgImage={bg1} // Jika ingin menggunakan gambar background yang berbeda

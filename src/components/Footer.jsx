@@ -30,7 +30,7 @@ export default function Footer() {
             Narahubung:
           </div>
           <p className="text-neutral-500">Delfa Nadila (+6282213192247)</p>
-          <p className="text-neutral-500">Sean Mahoraga (+62 821-7516-0231)</p>
+          <p className="text-neutral-500">Sean Mahogra (+62 821-7516-0231)</p>
         </div>
         <div>
           <h1 className="font-bold text-white text-3xl mb-4">Follow Us</h1>

@@ -5,20 +5,20 @@ import { MapPin } from 'lucide-react';
 const Timeline = () => {
   const events = [
     {
-      date: "19 Mei - 5 Juni 2024",
+      date: "5 Juni - 19 Juni 2024",
       buttonText: "Pendaftaran",
     },
     {
-      date: "6 Juni - 20 Juni 2024",
-      buttonText: "Pengumuman",
+      date: "21 Juni 2024",
+      buttonText: "Technical Meeting",
     },
     {
-      date: "21 Juni - 30 Juni 2024",
-      buttonText: "Pembayaran",
-    },
-    {
-      date: "1 Juli - 10 Juli 2024",
+      date: "22 Juni - 23 Juni 2024",
       buttonText: "Pelaksanaan",
+    },
+    {
+      date: "23 Juni 2024",
+      buttonText: "Closing Ceremony",
     },
   ];
 
