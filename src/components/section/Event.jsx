@@ -50,13 +50,14 @@ export default function Event() {
           desc="Hackathon adalah kompetisi tim untuk menciptakan solusi inovatif dalam waktu terbatas. Acara ini memberikan kesempatan bagi peserta untuk belajar hal baru dan memperluas jaringan profesional, dengan hadiah menarik bagi tim terbaik. Ayo bergabung dan tunjukkan kreativitas serta keahlianmu!
           "
           href="/event/hackathon"
-          onDaftarClick={() => openAuthModal(false)}
+          onDaftarClick={() => (window.location.href = 'https://forms.gle/K542NfbzyHDzNiZS7')}
+
         />
         <CardEvent
           title="Seminar IT"
           desc='Seminar IT bertema "Becoming IT Freelancer in 2024" adalah acara inspiratif yang dirancang untuk membantu Anda memulai karier di bidang teknologi. Pelajari langkah praktis, strategi mendapatkan klien, dan tips sukses dari para ahli, serta berjejaring dengan profesional lain. Daftar sekarang dan mulailah karier Anda sebagai freelancer di 2024!'
           href="/event/seminarIT"
-          onDaftarClick={() => openAuthModal(false)}
+          onDaftarClick={() => (window.location.href = 'https://forms.gle/SiKGxmQKJC5zW6KZ9')}
         />
         {isModalOpen && (
           <Auth onClose={closeModal} isLoginInitial={isLoginInitial} />

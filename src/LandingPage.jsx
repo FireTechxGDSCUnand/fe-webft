@@ -19,9 +19,9 @@ export default function LandingPage() {
       <Element name="count">
         <Count />
       </Element>
-      {/* <Element name="sponsor">
+      <Element name="sponsor">
         <Sponsor />
-      </Element> */}
+      </Element>
       <Element name="footer">
         <Footer />
       </Element>

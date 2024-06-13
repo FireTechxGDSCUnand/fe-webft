@@ -21,6 +21,7 @@ export default function SeminatIT() {
     countdownText="3 HARI LAGI!!"
     buttonText="DAFTAR SEKARANG!!"
     buttonVariant="second"  
+    onClick={() => (window.location.href = 'https://forms.gle/SiKGxmQKJC5zW6KZ9')}
     iconColor="red"         
   />        <CardCostum
   dateText="5 Juni - 19 Juni 2024"

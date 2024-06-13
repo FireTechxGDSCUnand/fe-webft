@@ -6,6 +6,7 @@ export default function Desc({
   title,
   description,
   countdownText,
+  onClick,
   buttonText,
   buttonVariant = "second",
   iconColor = "red",
@@ -24,7 +25,7 @@ export default function Desc({
         <h3 className="font-bold text-xl" style={{ color: iconColor }}>{countdownText}</h3>
       </section>
       <div>
-        <Button variant={buttonVariant}>{buttonText}</Button>
+        <Button onClick={onClick} variant={buttonVariant}>{buttonText}</Button>
       </div>
     </div>
   );

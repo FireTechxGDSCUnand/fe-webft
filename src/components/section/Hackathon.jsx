@@ -20,6 +20,7 @@ export default function SeminatIT() {
       description="Hackathon adalah kompetisi tim untuk menciptakan solusi inovatif dalam waktu terbatas. Acara ini memberikan kesempatan bagi peserta untuk belajar hal baru dan memperluas jaringan profesional, dengan hadiah menarik bagi tim terbaik. Ayo bergabung dan tunjukkan kreativitas serta keahlianmu!"
       countdownText="3 HARI LAGI!!"
       buttonText="DAFTAR SEKARANG!!"
+      onClick={() => (window.location.href = 'https://forms.gle/K542NfbzyHDzNiZS7')}
       buttonVariant="second"  
       iconColor="red"         
     />        <CardCostum
@@ -29,7 +30,7 @@ export default function SeminatIT() {
       feeText="Free"
       detailText="Detail acara dapat diunduh pada link disamping ini"
       downloadText="Unduh"
-      bgImage={bg1} // Jika ingin menggunakan gambar background yang berbeda
+      bgImage={bg1} 
     />
           </section>
       <Timeline />
